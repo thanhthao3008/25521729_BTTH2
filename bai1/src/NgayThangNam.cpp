@@ -45,12 +45,16 @@
 
     void NgayThangNam::Nhap()
     {
+       do
+       {
         cout << "Nhap ngay: ";
         cin >> iNgay;
         cout << "Nhap thang: ";
         cin >> iThang;
         cout << "Nhap nam (lon hon 0): "; // nam > 0
         cin >> iNam;
+       }
+       while (!KiemTra(iNgay, iThang, iNam));
     }
 
     void NgayThangNam::Xuat()
