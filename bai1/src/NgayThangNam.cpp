@@ -18,6 +18,7 @@
     //Hàm kiểm tra ngày hợp lệ
     bool KiemTra(int d, int m, int y)
     {
+        if (y <= 0) return 0; 
         //Tháng có 30 ngày
         if (m == 4 || m == 6 || m == 9 || m == 11)
             if (d > 30 || d < 1) return 0;
@@ -68,7 +69,9 @@
             Next.iNam = iNam;
         }
         //Tháng 31 ngày (trừ tháng 12), đang là ngày cuối tháng
-        else if ((iThang == 1 || iThang == 3 || iThang == 5 || iThang == 7 || iThang == 8 || iThang == 10) && iNgay == 31) {
+        else if ((iThang == 1 || iThang == 3 || iThang == 5 || iThang == 7 
+            || iThang == 8 || iThang == 10) && iNgay == 31) 
+        {
             Next.iNgay = 1;
             Next.iThang = iThang + 1;
             Next.iNam = iNam;

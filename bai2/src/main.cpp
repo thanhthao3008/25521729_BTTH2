@@ -19,8 +19,17 @@
         cout << "\nPhan so B: ";
         b.RutGon();
         b.Xuat();
+        // So sï¿½nh
+        int cmp = a.SoSanh(b);
+        cout << "\nSo sanh: ";
+        if (cmp == 1)
+            cout << "A > B\n";
+        else if (cmp == 0)
+            cout << "A = B\n";
+        else
+            cout << "A < B\n";
 
-        // Tính toán
+        // Tï¿½nh toï¿½n
         PhanSo tong = a.Tong(b);
         cout << "\nTong: ";
         tong.Xuat();
@@ -36,15 +45,6 @@
         PhanSo thuong = a.Thuong(b);
         cout << "\nThuong: ";
         thuong.Xuat();
-
-        // So sánh
-        int cmp = a.SoSanh(b);
-        if (cmp == 1)
-            cout << "\nA > B";
-        else if (cmp == 0)
-            cout << "\nA = B";
-        else
-            cout << "\nA < B";
 
         return 0;
     }
